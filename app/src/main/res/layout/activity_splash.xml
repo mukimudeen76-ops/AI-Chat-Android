@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toTopOf="@id/splashTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVerticalChain_style="packed" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <!-- Title -->
     <TextView

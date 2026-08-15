@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:text="Download Q4_K_M (~36GB)"
             android:layout_marginTop="20dp"
-            style="@style/Widget.Material3.Button.Filled"
+            
             app:cornerRadius="24dp" />
 
         <com.google.android.material.divider.MaterialDivider
@@ -87,7 +87,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                
                 android:hint="Ollama URL">
 
                 <com.google.android.material.textfield.TextInputEditText
