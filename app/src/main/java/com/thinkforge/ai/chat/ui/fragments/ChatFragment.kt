@@ -1,17 +1,18 @@
 package com.thinkforge.ai.chat.ui.fragments
 
 import android.os.Bundle
-import android.view.*
-import android.widget.Toast
+import android.view.KeyEvent
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.thinkforge.ai.chat.R
 import com.thinkforge.ai.chat.databinding.FragmentChatBinding
 import com.thinkforge.ai.chat.engine.ChatEngine
-import com.thinkforge.ai.chat.models.*
+import com.thinkforge.ai.chat.models.ChatMessage
+import com.thinkforge.ai.chat.models.MessageRole
 import com.thinkforge.ai.chat.ui.adapters.ChatAdapter
 import com.thinkforge.ai.chat.viewmodels.ChatViewModel
 import kotlinx.coroutines.launch
