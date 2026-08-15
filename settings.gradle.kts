@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ThinkForgeAI"
-include ':app'
+include(":app")
