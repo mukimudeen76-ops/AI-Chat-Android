@@ -1,0 +1,75 @@
+# ThinkForge AI - Git Ignore
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Android
+local.properties
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+
+# NDK
+obj/
+.jni/
+
+# Native
+*.o
+*.so
+*.dylib
+
+# Kotlin
+*.kotlin_module
+
+# Build cache
+.cxx/
+ndkBuild/
+.externalNativeBuild/
+
+# Assets/Models (large files)
+app/src/main/assets/models/
+models/
+*.gguf
+
+# Environment
+.env
+.env.local
+*.properties
+!gradle.properties
+!gradle-wrapper.properties
+
+# Logs
+*.log
+*.trace
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Temp
+*.tmp
+*.swp
+*.swo
+*~

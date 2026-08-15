@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ThinkForgeAI" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary_dark</item>
+        <item name="colorPrimaryDark">@color/brand_primary_dark</item>
+        <item name="colorAccent">@color/brand_accent</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@color/dark_primary_text</item>
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorOnBackground">@color/dark_primary_text</item>
+        
+        <!-- Custom Attributes -->
+        <item name="backgroundColor">@color/dark_background</item>
+        <item name="surfaceColor">@color/dark_surface</item>
+        <item name="primaryTextColor">@color/dark_primary_text</item>
+        <item name="secondaryTextColor">@color/dark_secondary_text</item>
+        <item name="captionTextColor">@color/dark_caption_text</item>
+        <item name="hintTextColor">@color/dark_hint_text</item>
+        <item name="pageBackground">@color/dark_page_bg</item>
+        <item name="cardBackground">@color/dark_card_bg</item>
+        <item name="dividerColor">@color/dark_divider</item>
+        <item name="primaryButtonTextColor">@android:color/white</item>
+        
+        <item name="android:statusBarColor">@color/dark_page_bg</item>
+        <item name="android:navigationBarColor">@color/dark_surface</item>
+        
+        <item name="fontFamily">@string/font_family</item>
+    </style>
+</resources>

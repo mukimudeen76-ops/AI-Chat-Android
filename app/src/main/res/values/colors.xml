@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors -->
+    <color name="brand_primary">#3964FE</color>
+    <color name="brand_primary_dark">#5686FE</color>
+    <color name="brand_accent">#7C3AED</color>
+    <color name="brand_gradient_start">#3964FE</color>
+    <color name="brand_gradient_end">#7C3AED</color>
+
+    <!-- Light Theme -->
+    <color name="light_background">#F8F9FA</color>
+    <color name="light_surface">#FFFFFF</color>
+    <color name="light_primary_text">#1B1B1C</color>
+    <color name="light_secondary_text">#61666B</color>
+    <color name="light_caption_text">#979DA6</color>
+    <color name="light_hint_text">#ADB2B8</color>
+    <color name="light_page_bg">#F1F3F5</color>
+    <color name="light_card_bg">#FFFFFF</color>
+    <color name="light_divider">#E1E5EE</color>
+
+    <!-- Dark Theme -->
+    <color name="dark_background">#0F1115</color>
+    <color name="dark_surface">#1B1B1C</color>
+    <color name="dark_primary_text">#F0F0F5</color>
+    <color name="dark_secondary_text">#ADB2B8</color>
+    <color name="dark_caption_text">#61666B</color>
+    <color name="dark_hint_text">#555570</color>
+    <color name="dark_page_bg">#151517</color>
+    <color name="dark_card_bg">#232324</color>
+    <color name="dark_divider">#2C2C2E</color>
+
+    <!-- Message Bubbles -->
+    <color name="user_bubble_bg">#3964FE</color>
+    <color name="user_bubble_text">#FFFFFF</color>
+    <color name="ai_bubble_bg">#232324</color>
+    <color name="ai_bubble_text">#F0F0F5</color>
+    <color name="ai_bubble_border">#2C2C2E</color>
+    <color name="system_bubble_bg">#1A1A2E</color>
+    <color name="system_bubble_text">#8888A0</color>
+
+    <!-- Status Colors -->
+    <color name="status_success">#22C55E</color>
+    <color name="status_warning">#F59E0B</color>
+    <color name="status_error">#EF4444</color>
+    <color name="status_info">#3B82F6</color>
+
+    <!-- Text Colors for messages -->
+    <color name="user_text_color">#FFFFFF</color>
+    <color name="ai_text_color">#F0F0F5</color>
+    
+    <!-- Navigation -->
+    <color name="bottom_nav_active">#3964FE</color>
+    <color name="bottom_nav_inactive">#979DA6</color>
+</resources>

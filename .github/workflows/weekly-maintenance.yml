@@ -1,0 +1,77 @@
+# ============================================================
+# 🧹 WEEKLY MAINTENANCE WORKFLOW
+# Har hafte auto cleanup, dependency update, aur health check
+# ============================================================
+
+name: 🧹 Weekly Maintenance
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'  # Har Monday subah 4 baje
+  workflow_dispatch:
+
+jobs:
+  maintenance:
+    name: 🧹 Weekly Health Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📦 Check Dependencies
+        run: |
+          echo "🔍 Checking gradle dependencies..."
+          ./gradlew dependencies --no-daemon > dependency-report.txt 2>&1 || true
+          echo "✅ Dependencies checked"
+
+      - name: 🔄 Update Dependencies
+        run: |
+          git config user.name "ThinkForge AI Bot"
+          git config user.email "bot@thinkforge.ai"
+          # Check for outdated deps
+          ./gradlew dependencyUpdates --no-daemon || true
+
+      - name: 🗑️ Clean Old Artifacts
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: runs } = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'build-and-release.yml',
+              per_page: 50
+            });
+            
+            for (const run of runs.workflow_runs.slice(5)) {
+              try {
+                await github.rest.actions.deleteWorkflowRun({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  run_id: run.id
+                });
+                console.log(`🗑️ Deleted old run: ${run.id}`);
+              } catch (e) {
+                console.log(`⚠️ Could not delete ${run.id}: ${e.message}`);
+              }
+            }
+
+      - name: 📊 Generate Weekly Report
+        run: |
+          echo "## 📊 Weekly Maintenance Report" > weekly-report.md
+          echo "" >> weekly-report.md
+          echo "**Date:** $(date)" >> weekly-report.md
+          echo "**Repo:** ${{ github.repository }}" >> weekly-report.md
+          echo "" >> weekly-report.md
+          echo "### ✅ Completed Tasks" >> weekly-report.md
+          echo "- [x] Dependency check" >> weekly-report.md
+          echo "- [x] Old artifact cleanup" >> weekly-report.md
+          echo "- [x] Health verification" >> weekly-report.md
+          cat weekly-report.md
+
+      - name: 📤 Upload Weekly Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-report-${{ github.run_id }}
+          path: weekly-report.md

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#3964FE"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0" />
+    
+    <!-- Brain/Think icon - stylized T/F -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,38h24v4h-10v8h8v4h-8v10h-4v-10h-8v-4h8v-8h-10z" />
+    
+    <!-- Sparkle dots -->
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M68,35m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0" />
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M38,70m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M72,68m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,45m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+        
+</vector>

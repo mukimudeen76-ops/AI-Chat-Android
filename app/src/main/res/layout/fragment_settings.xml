@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/pageBackground"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/primaryTextColor"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Generation Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="?attr/cardBackground"
+            android:layout_marginBottom="12dp"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Generation"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/primaryTextColor"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Temperature -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature"
+                    android:textColor="?attr/secondaryTextColor"
+                    android:textSize="13sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/temperatureSlider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:valueFrom="0.0"
+                        android:valueTo="2.0"
+                        android:stepSize="0.05"
+                        android:value="0.6" />
+                    <TextView
+                        android:id="@+id/temperatureValue"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.60"
+                        android:textColor="?attr/primaryTextColor"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <!-- Top P -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top P"
+                    android:textColor="?attr/secondaryTextColor"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/topPSlider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:valueFrom="0.0"
+                        android:valueTo="1.0"
+                        android:stepSize="0.01"
+                        android:value="0.95" />
+                    <TextView
+                        android:id="@+id/topPValue"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.95"
+                        android:textColor="?attr/primaryTextColor"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <!-- Max Tokens -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max New Tokens"
+                    android:textColor="?attr/secondaryTextColor"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/maxTokensSlider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:valueFrom="256"
+                        android:valueTo="8192"
+                        android:stepSize="256"
+                        android:value="4096" />
+                    <TextView
+                        android:id="@+id/maxTokensValue"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="4096"
+                        android:textColor="?attr/primaryTextColor"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <!-- Stream Toggle -->
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/streamToggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stream Tokens"
+                    android:textColor="?attr/primaryTextColor"
+                    android:layout_marginTop="8dp"
+                    android:checked="true" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Theme Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="?attr/cardBackground"
+            android:layout_marginBottom="12dp"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appearance"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/primaryTextColor"
+                    android:layout_marginBottom="12dp" />
+
+                <RadioGroup
+                    android:id="@+id/themeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/themeLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Light"
+                        android:textColor="?attr/primaryTextColor" />
+
+                    <RadioButton
+                        android:id="@+id/themeDark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dark"
+                        android:textColor="?attr/primaryTextColor" />
+
+                    <RadioButton
+                        android:id="@+id/themeSystem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="System"
+                        android:textColor="?attr/primaryTextColor"
+                        android:checked="true" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- About Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="?attr/cardBackground"
+            android:layout_marginBottom="12dp"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/primaryTextColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_version"
+                    android:textColor="?attr/secondaryTextColor"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/aboutText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/secondaryTextColor"
+                    android:textSize="13sp"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MIT License - Based on DeepSeek V4 Pro 0813"
+                    android:textSize="11sp"
+                    android:textColor="?attr/captionTextColor"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

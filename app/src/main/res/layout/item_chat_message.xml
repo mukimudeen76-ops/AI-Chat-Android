@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/messageBubble"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp"
+    app:strokeWidth="0dp"
+    android:maxWidth="85dp"
+    app:contentPadding="12dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Role / Sender -->
+        <TextView
+            android:id="@+id/messageRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:text="You" />
+
+        <!-- Content -->
+        <TextView
+            android:id="@+id/messageContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="15sp"
+            android:lineSpacingExtra="4sp"
+            android:textColorLink="#5686fe"
+            android:text="Hello, how can I help you?" />
+
+        <!-- Streaming Indicator -->
+        <LinearLayout
+            android:id="@+id/streamingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <View 
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/dot_loading"
+                android:layout_marginEnd="3dp" />
+            <View 
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/dot_loading"
+                android:layout_marginEnd="3dp"
+                android:alpha="0.6" />
+            <View 
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/dot_loading"
+                android:alpha="0.3" />
+
+        </LinearLayout>
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/messageTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="10sp"
+            android:textColor="?attr/captionTextColor"
+            android:text="12:00" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

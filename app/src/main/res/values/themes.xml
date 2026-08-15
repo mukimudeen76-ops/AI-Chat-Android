@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Theme -->
+    <style name="Theme.ThinkForgeAI" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryDark">@color/brand_primary_dark</item>
+        <item name="colorAccent">@color/brand_accent</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSurface">@color/light_surface</item>
+        <item name="colorOnSurface">@color/light_primary_text</item>
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="colorOnBackground">@color/light_primary_text</item>
+        
+        <!-- Custom Attributes -->
+        <item name="backgroundColor">@color/light_background</item>
+        <item name="surfaceColor">@color/light_surface</item>
+        <item name="primaryTextColor">@color/light_primary_text</item>
+        <item name="secondaryTextColor">@color/light_secondary_text</item>
+        <item name="captionTextColor">@color/light_caption_text</item>
+        <item name="hintTextColor">@color/light_hint_text</item>
+        <item name="pageBackground">@color/light_page_bg</item>
+        <item name="cardBackground">@color/light_card_bg</item>
+        <item name="dividerColor">@color/light_divider</item>
+        <item name="primaryButtonTextColor">@android:color/white</item>
+        
+        <item name="android:statusBarColor">@color/light_page_bg</item>
+        <item name="android:navigationBarColor">@color/light_surface</item>
+        
+        <!-- Font -->
+        <item name="fontFamily">@string/font_family</item>
+    </style>
+
+    <!-- Splash Theme -->
+    <style name="Theme.ThinkForgeAI.Splash" parent="Theme.ThinkForgeAI">
+        <item name="android:windowBackground">@drawable/splash_gradient</item>
+        <item name="android:statusBarColor">@color/brand_primary</item>
+    </style>
+
+    <!-- Attributes -->
+    <declare-styleable name="ThinkForgeTheme">
+        <attr name="backgroundColor" format="color" />
+        <attr name="surfaceColor" format="color" />
+        <attr name="primaryTextColor" format="color" />
+        <attr name="secondaryTextColor" format="color" />
+        <attr name="captionTextColor" format="color" />
+        <attr name="hintTextColor" format="color" />
+        <attr name="pageBackground" format="color" />
+        <attr name="cardBackground" format="color" />
+        <attr name="dividerColor" format="color" />
+        <attr name="primaryButtonTextColor" format="color" />
+    </declare-styleable>
+</resources>
