@@ -299,8 +299,10 @@ jobs:
           # Update version in code
           NEW_VER="${{ needs.version.outputs.new_version }}"
           if [ ! -z "$NEW_VER" ]; then
-            # Update versionName in build.gradle
-            sed -i "s/versionName \".*\"/versionName \"$NEW_VER\"/" app/build.gradle.kts
+            # Update versionName in build.gradle (Kotlin DSL safe)
+            sed -i "s/versionName = \".*\"/versionName = \"$NEW_VER\"/" app/build.gradle.kts
+            # Fallback if plain versionName used
+            sed -i "s/versionName \"[0-9.]*\"/versionName \"$NEW_VER\"/" app/build.gradle.kts
             git add app/build.gradle.kts
             git commit -m "🤖 Auto bump version to $NEW_VER [skip ci]" || true
             git push origin HEAD || true
