@@ -12,6 +12,11 @@ on:
     - cron: '0 */6 * * *'  # Har 6 ghante mein check
   workflow_dispatch:
 
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
 jobs:
   auto-fix:
     name: 🔧 Auto Fix Issues

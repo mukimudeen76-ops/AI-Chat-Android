@@ -40,6 +40,14 @@ on:
         type: string
         default: ''
 
+# Full permissions for auto push/tag/release
+permissions:
+  contents: write
+  issues: write
+  discussions: write
+  pull-requests: write
+  actions: write
+
 # Environment variables
 env:
   APP_NAME: "ThinkForge AI"
