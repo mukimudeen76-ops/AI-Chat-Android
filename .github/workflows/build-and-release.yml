@@ -44,7 +44,6 @@ on:
 permissions:
   contents: write
   issues: write
-  discussions: write
   pull-requests: write
   actions: write
 
@@ -199,7 +198,6 @@ jobs:
     
     permissions:
       contents: write
-      discussions: write
     
     steps:
       - name: Checkout Repository
@@ -265,7 +263,6 @@ jobs:
           draft: false
           prerelease: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master' }}
           generate_release_notes: true
-          discussion_category_name: "Announcements"
 
   # ============================================================
   # JOB 4: Auto Push & Sync 📤
