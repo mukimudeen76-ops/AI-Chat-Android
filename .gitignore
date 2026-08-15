@@ -42,7 +42,8 @@ ndkBuild/
 
 # Assets/Models (large files)
 app/src/main/assets/models/
-models/
+/app/models/
+**/models/*.gguf
 *.gguf
 
 # Environment
